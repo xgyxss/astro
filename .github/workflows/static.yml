@@ -37,6 +37,9 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload entire repository
+          #修改入口文件index.html所在目录
+          #根据：https://docs.github.com/zh/pages/getting-started-with-github-pages/creating-a-github-pages-site
+          #可知：GitHub Pages只会查找index.html、index.md或README.md文件。
           path: './dist'
       - name: Deploy to GitHub Pages
         id: deployment
